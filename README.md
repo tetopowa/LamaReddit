@@ -19,11 +19,13 @@ Théo Lacroix & Théo Marty (The Theos)
  
  ## Liens
  [Application](1-dot-lamareddit-205114.appspot.com/)
+ 
  [API](https://apis-explorer.appspot.com/apis-explorer/?base=https://1-dot-lamareddit-205114.appspot.com/_ah/api#p/messageendpoint/v1/)
 
 ## Metrics
 
 **Temps de poste d'un message**
+
 | Nb Voters     |     100         |     1000       |  5000          |
 | :------------ | :-------------: | :------------: | :------------: |
 | Moyenne       |    259      |        601   |        905 |
