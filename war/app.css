@@ -1,0 +1,35 @@
+/* app css stylesheet */
+body {
+  padding-top: 70px;
+}
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 95px;
+  }
+}
+
+.pagination {
+  margin-bottom: 15px;
+}
+
+.custom {
+  width: 40px !important;
+}
+
+.message{
+	border: black;
+
+    border-top-style: none;
+    border-right-style: none;
+    border-bottom-style: none;
+    border-left-style: none;
+
+border-style: solid;
+
+border-radius: 10px;
+
+padding: 10px;
+
+margin: 10px;
+}

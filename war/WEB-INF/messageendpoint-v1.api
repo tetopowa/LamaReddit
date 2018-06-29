@@ -1,0 +1,417 @@
+{
+  "extends" : "thirdParty.api",
+  "abstract" : false,
+  "root" : "https://lamareddit-205114.appspot.com/_ah/api",
+  "name" : "messageendpoint",
+  "version" : "v1",
+  "defaultVersion" : false,
+  "discovery" : [ "PUBLIC" ],
+  "adapter" : {
+    "bns" : "https://lamareddit-205114.appspot.com/_ah/spi",
+    "deadline" : 65.0,
+    "type" : "lily"
+  },
+  "auth" : {
+    "allowCookieAuth" : false
+  },
+  "frontendLimits" : {
+    "unregisteredUserQps" : -1,
+    "unregisteredQps" : -1,
+    "unregisteredDaily" : -1,
+    "rules" : [ ]
+  },
+  "cacheControl" : {
+    "type" : "no-cache",
+    "maxAge" : 0
+  },
+  "ownerDomain" : "mycompany.com",
+  "ownerName" : "mycompany.com",
+  "packagePath" : "services",
+  "methods" : {
+    "messageendpoint.removeMessage" : {
+      "path" : "message/{id}",
+      "httpMethod" : "DELETE",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.reddit.MessageEndpoint.removeMessage",
+      "request" : {
+        "parameters" : {
+          "id" : {
+            "type" : "int64",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "empty"
+      }
+    },
+    "messageendpoint.getMessage" : {
+      "path" : "message/{id}",
+      "httpMethod" : "GET",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.reddit.MessageEndpoint.getMessage",
+      "request" : {
+        "parameters" : {
+          "id" : {
+            "type" : "int64",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "messageendpoint.updateMessage" : {
+      "path" : "message",
+      "httpMethod" : "PUT",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.reddit.MessageEndpoint.updateMessage",
+      "request" : {
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "messageendpoint.getUserMessage" : {
+      "path" : "getUserMessage",
+      "httpMethod" : "GET",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.reddit.MessageEndpoint.getUserMessage",
+      "request" : {
+        "parameters" : {
+          "userID" : {
+            "type" : "string",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "messageendpoint.getBestMessage" : {
+      "path" : "getBestMessage",
+      "httpMethod" : "GET",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.reddit.MessageEndpoint.getBestMessage",
+      "request" : {
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "messageendpoint.getAllMessage" : {
+      "path" : "getAllMessage",
+      "httpMethod" : "GET",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.reddit.MessageEndpoint.getAllMessage",
+      "request" : {
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "messageendpoint.likeMessage" : {
+      "path" : "likeMessage",
+      "httpMethod" : "POST",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.reddit.MessageEndpoint.likeMessage",
+      "request" : {
+        "parameters" : {
+          "userID" : {
+            "type" : "string",
+            "required" : true
+          },
+          "idMessage" : {
+            "type" : "string",
+            "required" : true
+          },
+          "typeLike" : {
+            "type" : "boolean",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "messageendpoint.getUserLikedMessage" : {
+      "path" : "getUserLikedMessage",
+      "httpMethod" : "GET",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.reddit.MessageEndpoint.getUserLikedMessage",
+      "request" : {
+        "parameters" : {
+          "userID" : {
+            "type" : "string",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "messageendpoint.listMessage" : {
+      "path" : "message",
+      "httpMethod" : "GET",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.reddit.MessageEndpoint.listMessage",
+      "request" : {
+        "parameters" : {
+          "cursor" : {
+            "type" : "string",
+            "required" : false
+          },
+          "limit" : {
+            "type" : "int32",
+            "required" : false
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "messageendpoint.insertMessage" : {
+      "path" : "entity/{userName}/{userID}/{title}/{body}/{imgUrl}",
+      "httpMethod" : "POST",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.reddit.MessageEndpoint.insertMessage",
+      "request" : {
+        "parameters" : {
+          "userName" : {
+            "type" : "string",
+            "required" : true
+          },
+          "userID" : {
+            "type" : "string",
+            "required" : true
+          },
+          "title" : {
+            "type" : "string",
+            "required" : true
+          },
+          "body" : {
+            "type" : "string",
+            "required" : true
+          },
+          "imgUrl" : {
+            "type" : "string",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    }
+  },
+  "descriptor" : {
+    "schemas" : {
+      "Message" : {
+        "id" : "Message",
+        "type" : "object",
+        "properties" : {
+          "id" : {
+            "$ref" : "Key"
+          },
+          "owner" : {
+            "type" : "string"
+          },
+          "body" : {
+            "type" : "string"
+          },
+          "imgUrl" : {
+            "type" : "string"
+          },
+          "pubDate" : {
+            "type" : "string",
+            "format" : "date-time"
+          }
+        }
+      },
+      "Key" : {
+        "id" : "Key",
+        "type" : "object",
+        "properties" : {
+          "kind" : {
+            "type" : "string"
+          },
+          "appId" : {
+            "type" : "string"
+          },
+          "id" : {
+            "type" : "string",
+            "format" : "int64"
+          },
+          "name" : {
+            "type" : "string"
+          },
+          "namespace" : {
+            "type" : "string"
+          },
+          "complete" : {
+            "type" : "boolean"
+          },
+          "parent" : {
+            "$ref" : "Key"
+          }
+        }
+      },
+      "Entity" : {
+        "id" : "Entity",
+        "type" : "object",
+        "properties" : {
+          "key" : {
+            "$ref" : "Key"
+          },
+          "namespace" : {
+            "type" : "string"
+          },
+          "kind" : {
+            "type" : "string"
+          },
+          "parent" : {
+            "$ref" : "Key"
+          },
+          "appId" : {
+            "type" : "string"
+          },
+          "propertiesFrom" : {
+            "$ref" : "Entity"
+          },
+          "properties" : {
+            "$ref" : "JsonMap"
+          }
+        }
+      },
+      "JsonMap" : {
+        "id" : "JsonMap",
+        "type" : "object"
+      },
+      "EntityCollection" : {
+        "id" : "EntityCollection",
+        "type" : "object",
+        "properties" : {
+          "items" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "Entity"
+            }
+          }
+        }
+      },
+      "CollectionResponse_Message" : {
+        "id" : "CollectionResponse_Message",
+        "type" : "object",
+        "properties" : {
+          "items" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "Message"
+            }
+          },
+          "nextPageToken" : {
+            "type" : "string"
+          }
+        }
+      }
+    },
+    "methods" : {
+      "com.reddit.MessageEndpoint.removeMessage" : {
+      },
+      "com.reddit.MessageEndpoint.getMessage" : {
+        "response" : {
+          "$ref" : "Message"
+        }
+      },
+      "com.reddit.MessageEndpoint.updateMessage" : {
+        "request" : {
+          "$ref" : "Message"
+        },
+        "response" : {
+          "$ref" : "Message"
+        }
+      },
+      "com.reddit.MessageEndpoint.getUserMessage" : {
+        "response" : {
+          "$ref" : "EntityCollection"
+        }
+      },
+      "com.reddit.MessageEndpoint.getBestMessage" : {
+        "response" : {
+          "$ref" : "EntityCollection"
+        }
+      },
+      "com.reddit.MessageEndpoint.getAllMessage" : {
+        "response" : {
+          "$ref" : "EntityCollection"
+        }
+      },
+      "com.reddit.MessageEndpoint.likeMessage" : {
+        "response" : {
+          "$ref" : "Entity"
+        }
+      },
+      "com.reddit.MessageEndpoint.getUserLikedMessage" : {
+        "response" : {
+          "$ref" : "EntityCollection"
+        }
+      },
+      "com.reddit.MessageEndpoint.listMessage" : {
+        "response" : {
+          "$ref" : "CollectionResponse_Message"
+        }
+      },
+      "com.reddit.MessageEndpoint.insertMessage" : {
+        "response" : {
+          "$ref" : "Entity"
+        }
+      }
+    }
+  }
+}

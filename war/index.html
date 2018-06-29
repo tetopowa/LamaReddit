@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>LamaReddit</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="google-signin-client_id" content="834763357337-g0nsihvroisrecj93jdicbv6vgp98b0r.apps.googleusercontent.com">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+  <link rel="stylesheet" href="app.css">
+  <link href="components/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<body>
+
+
+  <!-- Navigation -->
+  <div ng-controller="Logger as logger">
+      <div class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+          <div class="container-fluid">
+              <div class="navbar-header">
+                  <a class="navbar-brand" href="#">
+                      <img alt="Brand" src="llama.png" style="width: 50px">
+                  </a>
+                  <a class="navbar-brand" href="#">Lama Reddit</a>
+              </div>
+              <ul class="nav navbar-nav navbar-right">
+                  <li class="nav-item">
+                      <a class="nav-link" href="#!/view1">Poster message</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#!/view2">Mes messages</a>
+                  </li>
+                  <li>
+                      <div class="g-signin2 " data-onsuccess="onSignIn"></div>
+                  </li>
+                  <li style="padding-left: 20px"><button class="btn btn-info" href="#" onclick="signOut()"><span class="glyphicon glyphicon-log-out"></span> log out</button></li>
+              </ul>
+              <!--<div class="g-signin2 " data-onsuccess="onSignIn"></div>-->
+              <!--<button type="button" class="btn btn-default navbar-btn" href="#" onclick="signOut()">Deconnecter</button>-->
+          </div>
+      </div>
+
+
+  </div>
+
+  <div ng-view class="container"></div>
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Théo Lacroix🏄🏻‍♂ & Théo Marty🚴🏻‍♂️ </p>
+    </div>
+  </footer>
+
+
+
+  <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+  -->
+  <script src="https://apis.google.com/js/platform.js?onload=init" async defer></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="https://apis.google.com/js/client.js?onload=init"></script>
+  <script src="app.js"></script>
+  <script src="logger.js"></script>
+  <script src="view1/view1.js"></script>
+  <script src="view2/view2.js"></script>
+
+
+
+  <!--<script>-->
+      <!--var init = function() {-->
+          <!--console.log("init called");-->
+          <!--window.init();-->
+      <!--};-->
+  <!--</script>-->
+
+  <script src="components/version/version.js"></script>
+  <script src="components/version/version-directive.js"></script>
+  <script src="components/version/interpolate-filter.js"></script>
+  <script src="components/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+</html>
